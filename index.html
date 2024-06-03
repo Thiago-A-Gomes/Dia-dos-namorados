@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz dia dos namorados</title>
+
+    <style>
+            
+        body{
+            background-color: pink;
+        }    
+
+        .painel{
+            margin: auto;
+            background-color: white;
+            width:500px;
+            height: 500px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 20px;
+            padding-top: 50px;
+        }
+
+        #sim{
+          height: 40px;
+          width: 70px;
+          background-color: red;
+          border:2px solid white;
+          color: white;
+          font-family: 'Times New Roman', Times, serif;
+          margin-left:-50px;
+          border-radius: 10px;
+        }
+        #nao{
+          position: absolute;
+          height: 40px;
+          width: 70px;
+          background-color: red;
+          border:2px solid white;
+          color: white;
+          font-family: 'Times New Roman', Times, serif;
+          border-radius: 10px;
+          margin-left:10px;
+        }
+        
+    </style>
+
+    <script>
+        function fuja(  ){
+         var botaoNao = document.getElementById('nao')
+
+          var largurajanela = window.innerWidth;
+
+          var Alturajanela = window.innerHeight;
+
+          var maxX = largurajanela - botaoNao.offsetWidth;
+          var maxY = Alturajanela  - botaoNao.offsetHeight;
+
+          var aleatorioX = Math.floor(Math.random( ) * maxX)
+          var aleatorioY =  Math.floor(Math.random() * maxY)
+
+          botaoNao.style.left = aleatorioX + "px";
+          botaoNao.style.top = aleatorioY +  "px";
+
+        }
+    </script>
+
+</head>
+<body>
+    
+    <div class="painel">
+       <h1>FELIZ DIA DOS NAMORADOS</h1>
+       <img src="https://i.pinimg.com/originals/89/49/8d/89498d1187c65bdae3a66475d556ca07.gif" alt="">
+       <h2> Voce aceita orar comigo?</h2>
+       
+       <a href="https://youtu.be/5TwgxM6GWfo?si=J5QeNk9b-ct0WQwf"><button id="sim">     SIM! </button></a>
+       <button onmouseover="fuja()" id="nao">NÃO !</button>
+       
+       
+
+    </div>
+
+</body>
+</html>
